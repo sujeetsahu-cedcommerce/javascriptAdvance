@@ -90,16 +90,23 @@ function Delete_Emp(obj){
 
 function check(emp_ID,emp_Name,emp_Sal){
     try{
-        if(emp_Sal <10000 || emp_Sal>40000) throw "salary must greater than 10000 and smaller than 40000";
-        emp_Sal=emp_Sal*1.10;
+        alert();
+        if(emp_Sal <10000 || emp_Sal>40000) throw "salary must greater than 10000 and smaller than 40000"; 
+        else if(emp_Name =="") {throw "name cannot be empty"; console.log("name_empty");}
+        else if(!isNaN(emp_Name)) {throw "name cannot be a number"; console.log("name is number");}
+       // emp_Sal=emp_Sal*1.10;
         const temp =[emp_ID,emp_Name,emp_Sal];
         len=emp.length;
         emp[len]=temp;
         render();
      }
      catch(error){
+         alert(error);
         console.warn(error);
         document.getElementById("displayErr").innerHtml=error;
+        document.getElementById("displayErrEmpty").innerHtml=error;
+        document.getElementById("displayErrNAN").innerHtml=error;
+
      } 
 }
 
@@ -118,7 +125,14 @@ function check(emp_ID,emp_Name,emp_Sal){
 /*Write a debug function and execute it whenever salary becomes less than or equals to zero.*/
 
 function debugfunction(){
-    
     console.warn("salary never be zero");
     debugger;
 }
+
+
+
+
+
+
+
+

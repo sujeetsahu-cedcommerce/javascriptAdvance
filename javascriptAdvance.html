@@ -8,7 +8,10 @@
 </head>
 <body>
     <body>
-        ID :<input id ="empID" type="text"><br><br>Name :<input id ="empName" type="text"><br><br>Basic Salary :<input id ="empSalary" type="text"><br><br><button id="addEmp" onclick="empDetails()">Add</button>
+        ID :<input id ="empID" type="text"><br><br>Name :<input id ="empName" type="text"><br><br>Basic Salary :<input id ="empSalary" 
+        type="text"><br><br>
+        <p style="color:red">all fields must be field</p>
+        <button id="addEmp" onclick="empDetails()">Add</button>
         <div id="display"></div>
 
         <div id="displayErr"></div>
@@ -28,6 +31,10 @@
     <!-- <script type="module" src="import_export.js"></script>  -->
 
     <!-- <script src="arrowfunction.js"></script> -->
+
+
+    <div id="displayErrEmpty"></div>
+    <div id="displayErrNAN"></div>
 
     
 </body>
