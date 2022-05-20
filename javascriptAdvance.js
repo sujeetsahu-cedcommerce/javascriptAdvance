@@ -1,14 +1,18 @@
- var emp= [];
 
+ var emp= [];
+ /* Change the salary of each employee to 30,000/- with the help of a function in strict mode and display the result. */
  function empDetails(){
+    'use strict';
     let emp_ID = document.getElementById("empID").value;
     let emp_Name = document.getElementById("empName").value;
     let emp_Sal = document.getElementById("empSalary").value;
     if(emp_Sal<=0){
-        debugfunction();
+      debugfunction();
     }
     else{
-    check(emp_ID,emp_Name,emp_Sal);
+                
+        emp_Sal =30000; // to make salary constant which is 30000;
+        check(emp_ID,emp_Name,emp_Sal);
     }
 }
 
@@ -90,8 +94,8 @@ function Delete_Emp(obj){
 
 function check(emp_ID,emp_Name,emp_Sal){
     try{
-        alert();
-        if(emp_Sal <10000 || emp_Sal>40000) throw "salary must greater than 10000 and smaller than 40000"; 
+        if(emp_ID =="") throw "id can never be empty";
+        if(emp_Sal <10000 || emp_Sal>40000 ) throw "salary must greater than 10000 and smaller than 40000"; 
         else if(emp_Name =="") {throw "name cannot be empty"; console.log("name_empty");}
         else if(!isNaN(emp_Name)) {throw "name cannot be a number"; console.log("name is number");}
        // emp_Sal=emp_Sal*1.10;
@@ -102,15 +106,15 @@ function check(emp_ID,emp_Name,emp_Sal){
      }
      catch(error){
          alert(error);
-        console.warn(error);
+       // console.warn(error);
+      
         document.getElementById("displayErr").innerHtml=error;
         document.getElementById("displayErrEmpty").innerHtml=error;
         document.getElementById("displayErrNAN").innerHtml=error;
+        document.getElementById("displayErrId").innerHtml=error;
 
      } 
 }
-
-
 
 /* Create a separate JS file with an employee detail and import it to your main HTML/JS code to add and display this employee details in the HTML page. */
 
@@ -128,6 +132,9 @@ function debugfunction(){
     console.warn("salary never be zero");
     debugger;
 }
+
+
+
 
 
 
