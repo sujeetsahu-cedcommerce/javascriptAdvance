@@ -81,12 +81,6 @@ function Delete_Emp(obj){
 // }
 
 
-// Use 'this' keyword to display the employee details (stored in JSON array) on the HTML page.
-
-
-// let e1 = new Emp(1001,'john',20000);
-// let e2 = new Emp(1002,'tailor',30000);
-// let e3 = new Emp(1003,'malinga',40000);
 
 
 // Apply proper error handling (try catch) and calculate the salary of an employee as salary * 1.10 and display the employee details with updated salary.
@@ -132,6 +126,26 @@ function debugfunction(){
     console.warn("salary never be zero");
     debugger;
 }
+
+
+// Use 'this' keyword to display the employee details (stored in JSON array) on the HTML page.
+
+
+class Emp{
+        constructor(id,name,salary){
+            this.Id = id;
+            this.Name = name;
+            this.Salary = salary;
+        }
+    }
+
+let e1 = new Emp(1001,'john',20000);
+let e2 = new Emp(1002,'tailor',30000);
+let e3 = new Emp(1003,'malinga',40000);
+
+
+
+
 
 
 
