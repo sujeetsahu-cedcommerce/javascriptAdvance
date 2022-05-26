@@ -1,3 +1,4 @@
+//arrow function assignment
 const emp = [];
 function empDetails(){
     let emp_ID = document.getElementById("empID").value;
